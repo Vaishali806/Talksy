@@ -308,13 +308,13 @@
 
     async function loadAllFriendsAndRenderList() {
       const usersRes = await fetch(
-        `https://talksy-xzl6.onrender.com/auth/getAllRegisterUsers`
+        `https://talksy-tqd8.onrender.com/auth/getAllRegisterUsers`
       );
       const users = await usersRes.json();
       const allRegisteredUsers = users.filter((u) => u._id !== myId);
 
       const friendsRes = await fetch(
-        `https://talksy-xzl6.onrender.com/api/friendList/${myId}`
+        `https://talksy-tqd8.onrender.com/api/friendList/${myId}`
       );
       // console.log("Value of friends before map:", friendsRes);
       const acceptedFriends = await friendsRes.json();
